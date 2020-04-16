@@ -1,0 +1,24 @@
+.es-stopwatch {
+    width: fit-content;
+    height: 32px;
+    padding: 0 @padding-sm;
+    display: flex;
+    align-items: center;
+    border-radius: @border-radius-base;
+    font-size: @font-size-base;
+    background-color: fade(@primary-1, 30%);
+    font-weight: bold;
+
+    &--stopped {
+        background-color: @grey-solid-3;
+    }
+
+    & .es-eva-icon {
+        margin-right: @margin-xs;
+    }
+
+    &--dark {
+        background-color: @white-1;
+        color: @white-7;
+    }
+}

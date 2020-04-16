@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="es-historical-issues-list"
+>
+  <div
+    className="es-historical-issues-item"
+  >
+    <div
+      className="es-historical-issues-item__img"
+      style={
+        Object {
+          "backgroundImage": "url([object Object])",
+        }
+      }
+    />
+    <div
+      className="es-historical-issues-item__content"
+    >
+      <div
+        className="es-typography mb-sm text-grey-8 es-typography--subtitle2 es-typography--ellipsis"
+        data-testid="es-typography"
+      >
+        Duis mauris augue, efficitur eu arcu sit amet, posuere dignissim neque. Aenean enim sem, pharetra et magna sit amet, luctus aliquet nibh. Curabitur auctor leo et libero consectetur gravida. Morbi gravida et sem dictum varius. Proin eget viverra sem, non euismod est. Maecenas facilisis urna in lectus aliquet venenatis. Etiam et metus nec mauris condimentum vulputate. Aenean volutpat odio quis egestas tempus. Fusce tempor vulputate luctus. Pellentesque vulputate viverra ex eget elementum. Aliquam ut feugiat felis.
+      </div>
+      <div
+        className="d-flex align-items-center"
+      >
+        <img
+          src={
+            Object {
+              "process": [Function],
+            }
+          }
+        />
+        <div
+          className="es-typography text-grey-6 ml-sm es-typography--caption"
+          data-testid="es-typography"
+        >
+          Instituição porem ipsum, 2014
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="es-historical-issues-item"
+  >
+    <div
+      className="es-historical-issues-item__img"
+      style={
+        Object {
+          "backgroundImage": "url([object Object])",
+        }
+      }
+    />
+    <div
+      className="es-historical-issues-item__content"
+    >
+      <div
+        className="es-typography mb-sm text-grey-8 es-typography--subtitle2 es-typography--ellipsis"
+        data-testid="es-typography"
+      >
+        Duis mauris augue, efficitur eu arcu sit amet, posuere dignissim neque. Aenean enim sem, pharetra et magna sit amet, luctus aliquet nibh. Curabitur auctor leo et libero consectetur gravida. Morbi gravida et sem dictum varius. Proin eget viverra sem, non euismod est. Maecenas facilisis urna in lectus aliquet venenatis. Etiam et metus nec mauris condimentum vulputate. Aenean volutpat odio quis egestas tempus. Fusce tempor vulputate luctus. Pellentesque vulputate viverra ex eget elementum. Aliquam ut feugiat felis.
+      </div>
+      <div
+        className="d-flex align-items-center"
+      >
+        <img
+          src={
+            Object {
+              "process": [Function],
+            }
+          }
+        />
+        <div
+          className="es-typography text-grey-6 ml-sm es-typography--caption"
+          data-testid="es-typography"
+        >
+          Instituição porem ipsum, 2014
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

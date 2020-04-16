@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ant-row-flex ant-row-flex-space-between ant-row-flex-bottom es-row es-lesson-header"
+  id="es-lesson-header"
+  style={Object {}}
+>
+  <div
+    className="ant-col es-col es-lesson-header__bookmark no-rate"
+    style={Object {}}
+  />
+  <div
+    className="ant-col es-col es-lesson-header__center ant-col-xs-24 ant-col-md-24 ant-col-lg-8 ant-col-lg-push-1"
+    style={Object {}}
+  >
+    <h1>
+      ESLessonHeader
+    </h1>
+  </div>
+</div>
+`;

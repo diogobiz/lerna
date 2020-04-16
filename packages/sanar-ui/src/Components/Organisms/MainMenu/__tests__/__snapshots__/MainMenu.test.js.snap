@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className=""
+  onScrollCapture={[Function]}
+  onTouchMoveCapture={[Function]}
+  onWheelCapture={[Function]}
+>
+  <div
+    className="es-main-menu es-main-menu__primary"
+  >
+    <div
+      className="es-main-menu__content close"
+    >
+      <div
+        className="es-main-menu__content--header"
+      >
+        <div
+          className="es-typography es-typography--regular es-typography__heading es-typography__heading--h5"
+          data-testid="flix_menu_es-typography--title"
+        >
+          Menu
+        </div>
+        <button
+          className="es-button es-button__medium es-button__variant--text white circle ant-btn"
+          data-testid="es-button"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="anticon es-eva-icon es-eva-icon--medium"
+          >
+            <i
+              data-eva="close-outline"
+              data-eva-fill="#fff"
+              data-eva-height="18px"
+              data-eva-width="18px"
+            />
+          </i>
+        </button>
+      </div>
+      <div
+        className="es-main-menu__content--scrollable es-main-menu__content--scrollable--element"
+      />
+    </div>
+    <div
+      className="es-main-menu__sidebar-left"
+    >
+      <div
+        className="es-main-menu__sidebar-left--actions"
+      >
+        <button
+          className="es-button es-button__medium es-button__variant--text white circle ant-btn"
+          data-testid="menu-initial-button"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="anticon es-eva-icon es-eva-icon--medium"
+          >
+            <i
+              data-eva="keypad-outline"
+              data-eva-fill="#fff"
+              data-eva-height="18px"
+              data-eva-width="18px"
+            />
+          </i>
+        </button>
+      </div>
+      <img
+        className="logo"
+        src={
+          Object {
+            "process": [Function],
+          }
+        }
+      />
+    </div>
+    <div
+      className="backdrop"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

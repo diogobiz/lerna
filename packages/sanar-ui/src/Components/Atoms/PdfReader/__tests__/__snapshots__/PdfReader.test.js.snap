@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="es-pdf-reader"
+>
+  <iframe
+    onCompositionStart={true}
+    onLoad={[Function]}
+    src="https://drive.google.com/viewerng/viewer?url=undefined?pid=explorer&efh=false&a=v&chrome=false&embedded=true"
+  />
+  <div
+    className="es-pdf-reader__footer"
+  >
+    <div
+      className="es-typography es-typography--light es-typography--caption"
+      data-testid="es-typography"
+    >
+      pdfReader.problemRenderingPdf
+    </div>
+    <button
+      className="es-button es-button__xsmall es-button__variant--text secondary bold ant-btn"
+      data-testid="es-button"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        pdfReader.clickAndDownload
+      </span>
+    </button>
+  </div>
+</div>
+`;

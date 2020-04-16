@@ -1,0 +1,101 @@
+.es-comment-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .secondary {
+        color: @secondary-color;
+        &:hover {
+            color: fade(@secondary-color, 70);
+            background-color: transparent !important;
+        }
+    }
+
+    &__empty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: @margin-lg;
+
+        & .es-typography {
+            margin-bottom: @margin-xs;
+            color: @white-7;
+            text-align: center;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid @white-2;
+        margin-bottom: @margin-sm;
+        padding-bottom: @padding-md;
+
+        & .es-typography {
+            color: @white-7;
+        }
+    }
+
+    & .es-text-editor {
+        margin-bottom: @margin-sm;
+        margin-left: 56px;
+    }
+
+    &-comment {
+        &__child {
+            margin-left: 56px;
+        }
+
+        & .es-text-editor + .es-button,
+        & .es-comment + .es-button {
+            margin-left: 56px;
+        }
+    }
+
+    &--interaction {
+        display: flex;
+        align-items: center;
+
+        & .es-button {
+            margin-right: @margin-xs;
+            color: @white-3;
+
+            &.active {
+                color: @secondary-color;
+            }
+        }
+    }
+
+    & .ant-comment-inner {
+        padding-bottom: 0;
+    }
+
+    & .ant-comment-actions {
+        & > li:nth-child(2) {
+            margin: 0 @margin-sm;
+        }
+
+        & > li {
+            vertical-align: middle;
+        }
+
+        & > li:last-child {
+            float: right;
+        }
+
+        & .es-typography {
+            color: @white-6;
+        }
+    }
+
+    @media (max-width: @screen-xs) {
+        &-comment__child,
+        & .es-text-editor + .es-button,
+        & .es-comment + .es-button,
+        & .es-text-editor {
+            margin-left: 0;
+        }
+    }
+}

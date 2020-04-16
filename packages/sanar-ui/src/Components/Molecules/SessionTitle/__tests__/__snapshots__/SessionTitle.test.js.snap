@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ant-row-flex ant-row-flex-space-between ant-row-flex-bottom es-row es-session-title"
+  data-testid="es-session-title"
+  style={
+    Object {
+      "marginLeft": -12,
+      "marginRight": -12,
+    }
+  }
+>
+  <div
+    className="ant-col es-col es-session-title__texts"
+    style={
+      Object {
+        "paddingLeft": 12,
+        "paddingRight": 12,
+      }
+    }
+  >
+    <div
+      className="es-typography es-session-title__texts--title mb-xs es-typography__heading es-typography__heading--h5"
+      data-testid="es-session-title__title"
+    >
+      Meu desenvolvimento
+    </div>
+    <div
+      className="es-typography es-session-title__texts--subtitle"
+      data-testid="es-session-title__subtitle"
+    >
+      Vejas as indicações de como você está se saindo no seu aprendizado com seu curso
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="es-auth-template"
+>
+  <div
+    className="ant-row es-row"
+    style={Object {}}
+  >
+    <div
+      className="ant-col es-col ant-col-xs-24 ant-col-md-12"
+      style={Object {}}
+    >
+      <div
+        className="es-auth-template__input-data"
+      >
+        <div
+          className="es-brand-header es-auth-template__input-data__header"
+        >
+          <img
+            alt="Sanar Logo in brand header."
+            src="{}"
+          />
+        </div>
+        <div
+          className="es-auth-template__input-data__content"
+        >
+          <div
+            className="es-auth-template__input-data__content__terms"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="ant-col es-col es-auth-template__marketing ant-col-xs-0 ant-col-md-12"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    >
+      <div
+        className="es-auth-template__marketing__content mb-xl"
+      >
+        <div
+          className="es-typography es-auth-template__marketing__content--title es-typography__heading es-typography__heading--h3"
+          data-testid="es-typography"
+        />
+        <div
+          className="es-typography es-typography--regular es-typography__heading es-typography__heading--h6"
+          data-testid="es-typography"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

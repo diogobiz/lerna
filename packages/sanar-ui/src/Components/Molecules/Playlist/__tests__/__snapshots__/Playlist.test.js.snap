@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="ant-skeleton es-skeleton es-playlist__description-skeleton es-skeleton--dark ant-skeleton-with-avatar ant-skeleton-active"
+  >
+    <div
+      className="ant-skeleton-header"
+    >
+      <span
+        className="ant-skeleton-avatar ant-skeleton-avatar-lg ant-skeleton-avatar-circle"
+        style={Object {}}
+      />
+    </div>
+    <div
+      className="ant-skeleton-content"
+    >
+      <ul
+        className="ant-skeleton-paragraph"
+      >
+        <li
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <li
+          style={
+            Object {
+              "width": "61%",
+            }
+          }
+        />
+      </ul>
+    </div>
+  </div>,
+  <div
+    className="ant-skeleton es-skeleton pl-md pr-md es-skeleton--dark ant-skeleton-active"
+  >
+    <div
+      className="ant-skeleton-content"
+    >
+      <ul
+        className="ant-skeleton-paragraph"
+      >
+        <li
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <li
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <li
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        />
+      </ul>
+    </div>
+  </div>,
+]
+`;

@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="es-discipline-dropdown__menu ant-dropdown-trigger es-dropdown es-discipline-dropdown"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+>
+  <div
+    className="d-flex align-items-center"
+  >
+    <div
+      className="ant-progress ant-progress-circle ant-progress-status-normal ant-progress-show-info ant-progress-default es-circle-progress es-circle-progress--warning es-circle-progress--white mr-xs es-circle-progress--trail--grey"
+    >
+      <div
+        className="ant-progress-inner"
+        style={
+          Object {
+            "fontSize": 10.8,
+            "height": 32,
+            "width": 32,
+          }
+        }
+      >
+        <svg
+          className="ant-progress-circle "
+          style={Object {}}
+          viewBox="0 0 100 100"
+        >
+          <path
+            className="ant-progress-circle-trail"
+            d="M 50,50 m 0,-46
+   a 46,46 0 1 1 0,92
+   a 46,46 0 1 1 0,-92"
+            fillOpacity="0"
+            stroke="#f3f3f3"
+            strokeLinecap="square"
+            strokeWidth={8}
+            style={
+              Object {
+                "stroke": "#f3f3f3",
+                "strokeDasharray": "289.02652413026095px 289.02652413026095px",
+                "strokeDashoffset": "-0px",
+                "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+              }
+            }
+          />
+          <path
+            className="ant-progress-circle-path"
+            d="M 50,50 m 0,-46
+   a 46,46 0 1 1 0,92
+   a 46,46 0 1 1 0,-92"
+            fillOpacity="0"
+            stroke=""
+            strokeLinecap="square"
+            strokeWidth={0}
+            style={
+              Object {
+                "stroke": "#108ee9",
+                "strokeDasharray": "0px 289.02652413026095px",
+                "strokeDashoffset": "-0px",
+                "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+              }
+            }
+          />
+        </svg>
+        <span
+          className="ant-progress-text"
+        >
+          <div
+            className="es-typography es-typography--caption"
+            data-testid="es-typography"
+          >
+            0
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      className="es-typography es-typography--body2"
+      data-testid="es-typography"
+    >
+      Odontologia Pratica
+    </div>
+  </div>
+  <i
+    className="anticon es-eva-icon es-eva-icon--large"
+  >
+    <i
+      data-eva="arrow-ios-downward-outline"
+      data-eva-fill="#fff"
+      data-eva-height="18px"
+      data-eva-width="18px"
+    />
+  </i>
+</div>
+`;

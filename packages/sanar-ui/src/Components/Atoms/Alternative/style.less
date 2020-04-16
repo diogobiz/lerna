@@ -1,0 +1,121 @@
+.es-alternative {
+    color: @grey-8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__container {
+        cursor: pointer;
+        padding: @padding-xs;
+        border-radius: @border-radius-base;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+        position: relative;
+        border: 1px solid;
+
+        &:hover {
+            background-color: @grey-1;
+        }
+
+        &--normal {
+            background-color: @white;
+            border-color: @grey-3;
+            & .badge {
+                background-color: @grey-solid-3;
+                &__text {
+                    color: @grey-7 !important;
+                }
+            }
+        }
+        &--selected {
+            background-color: @white;
+            border-color: @primary-color;
+            & .badge {
+                background-color: @primary-color;
+            }
+        }
+        &--correct {
+            background-color: fade(@green-1, 20);
+            border-color: @success-color;
+
+            & .badge {
+                background-color: @success-color;
+            }
+        }
+        &--incorrect {
+            background-color: fade(@red-1, 20);
+            border-color: @red-3;
+            & .badge {
+                background-color: @red-3;
+            }
+        }
+        &--correct-when-miss {
+            background-color: @white;
+            border-color: @grey-3;
+            & .badge {
+                background-color: @success-color;
+            }
+        }
+        &--incorrect-when-miss {
+            background-color: @white;
+            border-color: @grey-3;
+            & .badge {
+                background-color: @grey-solid-3;
+                &__text {
+                    color: @grey-7 !important;
+                }
+            }
+        }
+
+        & .pattern {
+            position: absolute;
+            right: 0;
+            background-repeat: repeat-y;
+            width: 8px;
+            height: 100%;
+            border-top-right-radius: @border-radius-base;
+            border-bottom-right-radius: @border-radius-base;
+            &__success {
+                background-image: url('@{assetsPath}/images/questions/success-pattern.svg');
+            }
+            &__danger {
+                background-image: url('@{assetsPath}/images/questions/danger-pattern.svg');
+            }
+            &__grey {
+                background-image: url('@{assetsPath}/images/questions/grey-pattern.svg');
+            }
+        }
+    }
+
+    & .badge {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: @font-size-sm;
+        margin-right: @margin-xs;
+        &__text {
+            color: @white;
+        }
+    }
+
+    & .answer {
+        color: @grey-8;
+        width: ~'calc(100% - 35px)';
+        &.striped {
+            text-decoration: line-through;
+        }
+    }
+
+    & .stripe-badge {
+        cursor: pointer;
+        border-radius: 50%;
+        margin-left: @margin-md;
+        border: 1px solid @grey-1;
+    }
+}

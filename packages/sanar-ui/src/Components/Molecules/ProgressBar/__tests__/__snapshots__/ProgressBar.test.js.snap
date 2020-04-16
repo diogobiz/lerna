@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="es-progress-bar"
+>
+  <div
+    className="ant-row-flex ant-row-flex-space-between ant-row-flex-middle es-row"
+    style={Object {}}
+  >
+    <div
+      className="ant-col es-col ant-col-xs-12"
+      style={Object {}}
+    >
+      <div
+        className="es-typography es-progress-bar__title es-typography__heading es-typography__heading--h6"
+        data-testid="es-typography"
+      >
+        Progresso do curso
+      </div>
+    </div>
+    <div
+      className="ant-col es-col"
+      style={Object {}}
+    >
+      <div
+        className="ant-row-flex ant-row-flex-space-between ant-row-flex-middle es-row"
+        style={
+          Object {
+            "marginLeft": -8,
+            "marginRight": -8,
+          }
+        }
+      >
+        <div
+          className="ant-col es-col"
+          style={
+            Object {
+              "paddingLeft": 8,
+              "paddingRight": 8,
+            }
+          }
+        >
+          <div
+            className="es-common-badge es-common-badge--warning"
+            data-testid="es-common-badge"
+            style={Object {}}
+          >
+            30%
+          </div>
+        </div>
+        <div
+          className="ant-col es-col es-progress-bar__icon"
+          style={
+            Object {
+              "paddingLeft": 8,
+              "paddingRight": 8,
+            }
+          }
+        >
+          <i
+            className="anticon es-eva-icon es-eva-icon--small"
+          >
+            <i
+              data-eva="award-outline"
+              data-eva-fill="#fff"
+              data-eva-height="18px"
+              data-eva-width="18px"
+            />
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="es-progress es-progress--warning es-progress__goal"
+  >
+    <div
+      className="ant-progress ant-progress-line ant-progress-status-normal ant-progress-small"
+    >
+      <div>
+        <div
+          className="ant-progress-outer"
+        >
+          <div
+            className="ant-progress-inner"
+          >
+            <div
+              className="ant-progress-bg"
+              style={
+                Object {
+                  "background": undefined,
+                  "borderRadius": "",
+                  "height": 6,
+                  "width": "30%",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="es-progress__goal__indicator es-progress__goal__indicator--small"
+      style={
+        Object {
+          "width": "calc(100% - 80%)",
+        }
+      }
+    />
+  </div>
+</div>
+`;

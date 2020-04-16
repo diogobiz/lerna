@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="es-miss-content"
+>
+  <img
+    className="es-miss-content--img"
+  />
+  <div
+    className="es-miss-content__content"
+  >
+    <div
+      className="es-typography es-miss-content__content--text es-typography--regular es-typography__heading es-typography__heading--h5"
+      data-testid="es-typography"
+    />
+  </div>
+</div>
+`;

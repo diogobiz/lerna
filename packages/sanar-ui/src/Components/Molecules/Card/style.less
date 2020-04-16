@@ -1,0 +1,41 @@
+.es-card {
+    box-shadow: @es-card-shadow;
+    border: 1px solid @grey-3;
+    overflow: hidden;
+
+    .ant-card-body {
+        position: relative;
+    }
+
+    &.ant-card-small {
+        .ant-card-head {
+            min-height: auto;
+            font-size: @font-size-xs;
+            text-transform: uppercase;
+        }
+
+        .ant-card-actions {
+            border-radius: 0 0 @card-radius @card-radius;
+
+            > li {
+                margin: 0;
+                padding: @margin-xs / 2;
+                border: none;
+                height: 100%;
+                & > span {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__doubt {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+
+        svg {
+            fill: rgba(17, 19, 23, 0.25);
+        }
+    }
+}

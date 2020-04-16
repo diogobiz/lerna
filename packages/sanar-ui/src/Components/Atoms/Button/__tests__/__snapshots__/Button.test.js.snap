@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<button
+  className="es-button es-button__medium ant-btn"
+  data-testid="es-button"
+  type="button"
+>
+  <span>
+    Button
+  </span>
+</button>
+`;

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="es-jw-player"
+>
+  <div
+    className="ant-spin ant-spin-spinning es-spin es-spin__dark es-jw-player__loader"
+    style={
+      Object {
+        "height": "undefinedpx",
+      }
+    }
+  >
+    <span
+      className="ant-spin-dot ant-spin-dot-spin"
+    >
+      <i
+        className="ant-spin-dot-item"
+      />
+      <i
+        className="ant-spin-dot-item"
+      />
+      <i
+        className="ant-spin-dot-item"
+      />
+      <i
+        className="ant-spin-dot-item"
+      />
+    </span>
+  </div>
+  <div>
+    <div
+      id="playerId"
+    />
+  </div>
+</div>
+`;

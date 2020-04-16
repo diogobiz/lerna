@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<ul
+  className="ant-pagination es-pagination"
+  style={Object {}}
+  unselectable="unselectable"
+>
+  <li
+    aria-disabled={false}
+    className=" ant-pagination-prev"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex={0}
+    title="Previous Page"
+  >
+    <button
+      className="es-button es-pagination--arrow--prev es-button__medium es-button__variant--text ant-btn"
+      data-testid="es-button"
+      type="button"
+    >
+      <i
+        className="anticon es-eva-icon es-eva-icon--medium"
+      >
+        <i
+          data-eva="chevron-left-outline"
+          data-eva-fill="#fff"
+          data-eva-height="18px"
+          data-eva-width="18px"
+        />
+      </i>
+    </button>
+  </li>
+  <li
+    className="ant-pagination-item ant-pagination-item-1"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex="0"
+    title={1}
+  >
+    <a>
+      1
+    </a>
+  </li>
+  <li
+    className="ant-pagination-jump-prev ant-pagination-jump-prev-custom-icon"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex="0"
+    title="Previous 5 Pages"
+  >
+    <button
+      className="es-button es-pagination--jumps es-button__medium es-button__variant--text ant-btn"
+      data-testid="es-button"
+      type="button"
+    >
+      <i
+        className="anticon es-eva-icon es-eva-icon--medium"
+      >
+        <i
+          data-eva="more-horizontal-outline"
+          data-eva-fill="#fff"
+          data-eva-height="18px"
+          data-eva-width="18px"
+        />
+      </i>
+    </button>
+  </li>
+  <li
+    className="ant-pagination-item ant-pagination-item-3 ant-pagination-item-after-jump-prev"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex="0"
+    title={3}
+  >
+    <a>
+      3
+    </a>
+  </li>
+  <li
+    className="ant-pagination-item ant-pagination-item-4"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex="0"
+    title={4}
+  >
+    <a>
+      4
+    </a>
+  </li>
+  <li
+    className="ant-pagination-item ant-pagination-item-5 ant-pagination-item-active"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex="0"
+    title={5}
+  >
+    <a>
+      5
+    </a>
+  </li>
+  <li
+    className="ant-pagination-item ant-pagination-item-6"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex="0"
+    title={6}
+  >
+    <a>
+      6
+    </a>
+  </li>
+  <li
+    className="ant-pagination-item ant-pagination-item-7 ant-pagination-item-before-jump-next"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex="0"
+    title={7}
+  >
+    <a>
+      7
+    </a>
+  </li>
+  <li
+    className="ant-pagination-jump-next ant-pagination-jump-next-custom-icon"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex="0"
+    title="Next 5 Pages"
+  >
+    <button
+      className="es-button es-pagination--jumps es-button__medium es-button__variant--text ant-btn"
+      data-testid="es-button"
+      type="button"
+    >
+      <i
+        className="anticon es-eva-icon es-eva-icon--medium"
+      >
+        <i
+          data-eva="more-horizontal-outline"
+          data-eva-fill="#fff"
+          data-eva-height="18px"
+          data-eva-width="18px"
+        />
+      </i>
+    </button>
+  </li>
+  <li
+    className="ant-pagination-item ant-pagination-item-10"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex="0"
+    title={10}
+  >
+    <a>
+      10
+    </a>
+  </li>
+  <li
+    aria-disabled={false}
+    className=" ant-pagination-next"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex={0}
+    title="Next Page"
+  >
+    <button
+      className="es-button es-pagination--arrow--next es-button__medium es-button__variant--text ant-btn"
+      data-testid="es-button"
+      type="button"
+    >
+      <i
+        className="anticon es-eva-icon es-eva-icon--medium"
+      >
+        <i
+          data-eva="chevron-right-outline"
+          data-eva-fill="#fff"
+          data-eva-height="18px"
+          data-eva-width="18px"
+        />
+      </i>
+    </button>
+  </li>
+</ul>
+`;

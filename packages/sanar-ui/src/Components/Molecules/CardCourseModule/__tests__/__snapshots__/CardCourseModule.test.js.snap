@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ant-card es-card es-car-course-module ant-card-bordered ant-card-small"
+  data-testid="es-card-course-module"
+>
+  <div
+    className="ant-card-body"
+    style={Object {}}
+  >
+    <div
+      className="es-car-course-module__content"
+    >
+      <div
+        className="es-car-course-module__content__module-data"
+      >
+        <div
+          className="ant-skeleton es-skeleton es-skeleton--dark"
+        >
+          <div
+            className="ant-skeleton-content"
+          >
+            <ul
+              className="ant-skeleton-paragraph"
+            >
+              <li
+                style={
+                  Object {
+                    "width": undefined,
+                  }
+                }
+              />
+              <li
+                style={
+                  Object {
+                    "width": "61%",
+                  }
+                }
+              />
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        className="es-car-course-module__content__image-container mb-sm"
+      >
+        <div
+          className="es-car-course-module__content__image-container--image"
+          style={
+            Object {
+              "backgroundImage": "url(undefined)",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="ant-row-flex ant-row-flex-end ant-row-flex-middle es-row es-car-course-module__footer"
+      style={Object {}}
+    >
+      <div
+        className="ant-col es-col"
+        style={Object {}}
+      >
+        <button
+          className="es-button pr-no es-button__xsmall es-button__variant--text bold ant-btn"
+          data-testid="es-button"
+          type="button"
+        >
+          <span>
+            Ver aulas
+          </span>
+          <i
+            className="anticon es-eva-icon es-eva-icon--large"
+          >
+            <i
+              data-eva="chevron-right-outline"
+              data-eva-fill="#fff"
+              data-eva-height="18px"
+              data-eva-width="18px"
+            />
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,418 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ant-card es-card es-practice-completed ant-card-bordered ant-card-small"
+>
+  <div
+    className="ant-card-body"
+    style={Object {}}
+  >
+    <div
+      className="es-practice-completed--title"
+    >
+      <i
+        className="anticon es-eva-icon es-eva-icon--medium"
+      >
+        <i
+          data-eva="checkmark-circle-outline"
+          data-eva-fill="#fff"
+          data-eva-height="18px"
+          data-eva-width="18px"
+        />
+      </i>
+      <div
+        className="es-typography es-typography--regular es-typography__heading es-typography__heading--h3"
+        data-testid="es-typography"
+      >
+        practiceCompleted.title
+      </div>
+    </div>
+    <div
+      className="es-practice-completed__content"
+    >
+      <div
+        className="es-practice-completed__content__card"
+      >
+        <div
+          className="es-practice-completed__content__card--icon"
+        >
+          <i
+            className="anticon es-eva-icon es-eva-icon--xlarge"
+          >
+            <i
+              data-eva="clock-outline"
+              data-eva-fill="#fff"
+              data-eva-height="18px"
+              data-eva-width="18px"
+            />
+          </i>
+        </div>
+        <div
+          className="es-practice-completed__content__card__content"
+        >
+          <div
+            className="es-practice-completed__content__card__content__info-line"
+          >
+            <div
+              className="es-practice-completed__content__card__content__info-line--indicator"
+            >
+              <div
+                className="es-typography es-typography--body2 es-typography--strong"
+                data-testid="es-typography"
+              >
+                00:00
+              </div>
+            </div>
+            <div
+              className="es-typography es-typography--body2"
+              data-testid="es-typography"
+            >
+              practiceCompleted.elapsedTime
+            </div>
+          </div>
+          <div
+            className="es-practice-completed__content__card__content__info-line"
+          >
+            <div
+              className="es-practice-completed__content__card__content__info-line--indicator"
+            >
+              <div
+                className="es-typography es-typography--body2 es-typography--strong"
+                data-testid="es-typography"
+              >
+                00:00
+              </div>
+            </div>
+            <div
+              className="es-typography es-typography--body2"
+              data-testid="es-typography"
+            >
+              practiceCompleted.averageQuestionTime
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ant-row-flex ant-row-flex-center ant-row-flex-middle es-row es-practice-completed__content__summary"
+        style={
+          Object {
+            "marginLeft": -16,
+            "marginRight": -16,
+          }
+        }
+      >
+        <div
+          className="ant-col es-col es-practice-completed__content__summary__questions d-flex justify-content-center align-items-center"
+          style={
+            Object {
+              "paddingLeft": 16,
+              "paddingRight": 16,
+            }
+          }
+        >
+          <div
+            className="es-typography mb-no es-typography--regular es-typography__heading es-typography__heading--h2"
+            data-testid="es-typography"
+          >
+            0
+          </div>
+          <div
+            className="es-typography es-practice-completed__content__summary__questions--description"
+            data-testid="es-typography"
+          >
+            practiceCompleted.sawQuestions
+          </div>
+        </div>
+        <div
+          className="ant-col es-col graphs"
+          style={
+            Object {
+              "paddingLeft": 16,
+              "paddingRight": 16,
+            }
+          }
+        >
+          <div
+            className="ant-row-flex ant-row-flex-space-between ant-row-flex-middle es-row"
+            style={
+              Object {
+                "marginLeft": -8,
+                "marginRight": -8,
+              }
+            }
+          >
+            <div
+              className="ant-col es-col ant-col-xs-8"
+              style={
+                Object {
+                  "flex": 1,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                }
+              }
+            >
+              <div
+                className="ant-progress ant-progress-circle ant-progress-status-normal ant-progress-show-info ant-progress-default es-circle-progress es-circle-progress--success es-circle-progress--undefined"
+              >
+                <div
+                  className="ant-progress-inner"
+                  style={
+                    Object {
+                      "fontSize": 21,
+                      "height": 100,
+                      "width": 100,
+                    }
+                  }
+                >
+                  <svg
+                    className="ant-progress-circle "
+                    style={Object {}}
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      className="ant-progress-circle-trail"
+                      d="M 50,50 m 0,-48.5
+   a 48.5,48.5 0 1 1 0,97
+   a 48.5,48.5 0 1 1 0,-97"
+                      fillOpacity="0"
+                      stroke="#f3f3f3"
+                      strokeLinecap="square"
+                      strokeWidth={3}
+                      style={
+                        Object {
+                          "stroke": "#f3f3f3",
+                          "strokeDasharray": "304.7344873982099px 304.7344873982099px",
+                          "strokeDashoffset": "-0px",
+                          "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                        }
+                      }
+                    />
+                    <path
+                      className="ant-progress-circle-path"
+                      d="M 50,50 m 0,-48.5
+   a 48.5,48.5 0 1 1 0,97
+   a 48.5,48.5 0 1 1 0,-97"
+                      fillOpacity="0"
+                      stroke=""
+                      strokeLinecap="square"
+                      strokeWidth={0}
+                      style={
+                        Object {
+                          "stroke": "#108ee9",
+                          "strokeDasharray": "0px 304.7344873982099px",
+                          "strokeDashoffset": "-0px",
+                          "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                        }
+                      }
+                    />
+                  </svg>
+                  <span
+                    className="ant-progress-text"
+                  >
+                    <div
+                      className="mr-no"
+                    >
+                      <div
+                        className="es-typography mb-xxs es-typography--subtitle2 es-typography--regular"
+                        data-testid="es-typography"
+                      >
+                        practiceCompleted.correct
+                      </div>
+                      <div
+                        className="es-typography es-typography__heading es-typography__heading--h5"
+                        data-testid="es-typography"
+                      >
+                        0
+                        %
+                      </div>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="ant-col es-col ant-col-xs-8"
+              style={
+                Object {
+                  "flex": 1,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                }
+              }
+            >
+              <div
+                className="ant-progress ant-progress-circle ant-progress-status-normal ant-progress-show-info ant-progress-default es-circle-progress es-circle-progress--error es-circle-progress--undefined"
+              >
+                <div
+                  className="ant-progress-inner"
+                  style={
+                    Object {
+                      "fontSize": 21,
+                      "height": 100,
+                      "width": 100,
+                    }
+                  }
+                >
+                  <svg
+                    className="ant-progress-circle "
+                    style={Object {}}
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      className="ant-progress-circle-trail"
+                      d="M 50,50 m 0,-48.5
+   a 48.5,48.5 0 1 1 0,97
+   a 48.5,48.5 0 1 1 0,-97"
+                      fillOpacity="0"
+                      stroke="#f3f3f3"
+                      strokeLinecap="square"
+                      strokeWidth={3}
+                      style={
+                        Object {
+                          "stroke": "#f3f3f3",
+                          "strokeDasharray": "304.7344873982099px 304.7344873982099px",
+                          "strokeDashoffset": "-0px",
+                          "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                        }
+                      }
+                    />
+                    <path
+                      className="ant-progress-circle-path"
+                      d="M 50,50 m 0,-48.5
+   a 48.5,48.5 0 1 1 0,97
+   a 48.5,48.5 0 1 1 0,-97"
+                      fillOpacity="0"
+                      stroke=""
+                      strokeLinecap="square"
+                      strokeWidth={0}
+                      style={
+                        Object {
+                          "stroke": "#108ee9",
+                          "strokeDasharray": "0px 304.7344873982099px",
+                          "strokeDashoffset": "-0px",
+                          "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                        }
+                      }
+                    />
+                  </svg>
+                  <span
+                    className="ant-progress-text"
+                  >
+                    <div
+                      className="mr-no"
+                    >
+                      <div
+                        className="es-typography mb-xxs es-typography--subtitle2 es-typography--regular"
+                        data-testid="es-typography"
+                      >
+                        practiceCompleted.wrong
+                      </div>
+                      <div
+                        className="es-typography es-typography__heading es-typography__heading--h5"
+                        data-testid="es-typography"
+                      >
+                        0
+                        %
+                      </div>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="ant-col es-col ant-col-xs-8"
+              style={
+                Object {
+                  "flex": 1,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                }
+              }
+            >
+              <div
+                className="ant-progress ant-progress-circle ant-progress-status-normal ant-progress-show-info ant-progress-default es-circle-progress es-circle-progress--normal es-circle-progress--undefined"
+              >
+                <div
+                  className="ant-progress-inner"
+                  style={
+                    Object {
+                      "fontSize": 21,
+                      "height": 100,
+                      "width": 100,
+                    }
+                  }
+                >
+                  <svg
+                    className="ant-progress-circle "
+                    style={Object {}}
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      className="ant-progress-circle-trail"
+                      d="M 50,50 m 0,-48.5
+   a 48.5,48.5 0 1 1 0,97
+   a 48.5,48.5 0 1 1 0,-97"
+                      fillOpacity="0"
+                      stroke="#f3f3f3"
+                      strokeLinecap="square"
+                      strokeWidth={3}
+                      style={
+                        Object {
+                          "stroke": "#f3f3f3",
+                          "strokeDasharray": "304.7344873982099px 304.7344873982099px",
+                          "strokeDashoffset": "-0px",
+                          "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                        }
+                      }
+                    />
+                    <path
+                      className="ant-progress-circle-path"
+                      d="M 50,50 m 0,-48.5
+   a 48.5,48.5 0 1 1 0,97
+   a 48.5,48.5 0 1 1 0,-97"
+                      fillOpacity="0"
+                      stroke=""
+                      strokeLinecap="square"
+                      strokeWidth={0}
+                      style={
+                        Object {
+                          "stroke": "#108ee9",
+                          "strokeDasharray": "0px 304.7344873982099px",
+                          "strokeDashoffset": "-0px",
+                          "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                        }
+                      }
+                    />
+                  </svg>
+                  <span
+                    className="ant-progress-text"
+                  >
+                    <div
+                      className="mr-no"
+                    >
+                      <div
+                        className="es-typography mb-xxs es-typography--subtitle2 es-typography--regular"
+                        data-testid="es-typography"
+                      >
+                        practiceCompleted.skipped
+                      </div>
+                      <div
+                        className="es-typography es-typography__heading es-typography__heading--h5"
+                        data-testid="es-typography"
+                      >
+                        0
+                        %
+                      </div>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

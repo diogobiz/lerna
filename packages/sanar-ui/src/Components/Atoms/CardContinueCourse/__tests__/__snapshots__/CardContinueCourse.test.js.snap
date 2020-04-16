@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="es-card-continue-course es-card-continue-course--radius"
+>
+  <div
+    className="es-card-continue-course--texts"
+  >
+    <div
+      className="es-typography text-grey-6 es-typography--caption es-typography--ellipsis"
+      data-testid="es-typography"
+    />
+    <div
+      className="es-typography text-grey-8 es-typography--caption es-typography--strong es-typography--ellipsis"
+      data-testid="es-typography"
+    />
+  </div>
+  <i
+    className="anticon es-eva-icon es-eva-icon--xlarge"
+  >
+    <i
+      data-eva="play-circle"
+      data-eva-fill="#fff"
+      data-eva-height="18px"
+      data-eva-width="18px"
+    />
+  </i>
+</div>
+`;

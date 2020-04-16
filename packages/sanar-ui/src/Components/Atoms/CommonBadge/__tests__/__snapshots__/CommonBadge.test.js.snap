@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="es-common-badge es-common-badge--undefined"
+  data-testid="es-common-badge"
+  style={Object {}}
+>
+  50
+</div>
+`;
