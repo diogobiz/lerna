@@ -1,0 +1,35 @@
+{
+    "name": "@sanar/utils",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "styled-components": "^4.3.2",
+        "typescript": "^3.5.3"
+    },
+    "scripts": {
+        "build": "cross-env BABEL_ENV=build babel src -d dist --source-maps --delete-dir-on-start --config-file ./babel.config.js --extensions \".ts,.tsx\" --no-comments --copy-files",
+        "build:types": "tsc --emitDeclarationOnly -w",
+        "start": "yarn build -w",
+        "start:dev": "npm-run-all --parallel start build:types",
+        "test": "jest"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.0",
+        "@babel/preset-env": "^7.9.5",
+        "@babel/preset-react": "^7.7.4",
+        "@babel/preset-typescript": "^7.7.7",
+        "@types/react": "^16.8.24",
+        "@types/react-dom": "^16.8.5",
+        "@types/styled-components": "^4.1.18",
+        "babel-jest": "^25.3.0",
+        "babel-loader": "8.0.5",
+        "cross-env": "^5.2.0",
+        "jest": "^25.3.0"
+    },
+    "author": "@sanar",
+    "license": "ISC"
+}
