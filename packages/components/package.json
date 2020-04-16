@@ -14,6 +14,10 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest"
   },
+  "peerDependencies": {
+    "@diogobiz/sanar-ui": "^1.0.8",
+    "@diogobiz/utils": "^1.0.8"
+  },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.4",
     "@fullcalendar/core": "^4.3.1",
