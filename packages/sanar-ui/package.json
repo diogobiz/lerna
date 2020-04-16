@@ -1,6 +1,6 @@
 {
   "name": "@diogobiz/sanar-ui",
-  "version": "1.0.8",
+  "version": "1.0.12",
   "license": "ISC",
   "main": "dist/index.js",
   "module": "dist/index.js",
