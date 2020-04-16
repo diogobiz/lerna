@@ -15,8 +15,8 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "@diogobiz/sanar-ui": "^1.0.8",
-    "@diogobiz/utils": "^1.0.8"
+    "@diogobiz/sanar-ui": "*",
+    "@diogobiz/utils": "*"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.4",
