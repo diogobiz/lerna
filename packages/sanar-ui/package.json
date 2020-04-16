@@ -15,33 +15,6 @@
     "files": [
         "dist"
     ],
-    "devDependencies": {
-        "@babel/cli": "^7.4.3",
-        "@babel/core": "^7.4.3",
-        "@babel/preset-env": "^7.4.3",
-        "@babel/preset-react": "^7.0.0",
-        "@storybook/addon-actions": "^5.0.8",
-        "@storybook/addon-info": "^5.0.8",
-        "@storybook/addon-knobs": "^5.0.8",
-        "@storybook/addon-links": "^5.0.8",
-        "@storybook/addon-storysource": "^5.0.11",
-        "@storybook/addon-viewport": "^5.0.8",
-        "@storybook/addons": "^5.0.8",
-        "@storybook/react": "^5.0.8",
-        "babel-jest": "24.7.1",
-        "babel-loader": "8.0.5",
-        "cross-env": "^5.2.0",
-        "hygen": "^5.0.3",
-        "identity-obj-proxy": "^3.0.0",
-        "jest": "24.7.1",
-        "jest-image-snapshot": "^2.8.1",
-        "jest-puppeteer": "^4.1.1",
-        "jest-transform-stub": "^2.0.0",
-        "less-loader": "4.1.0",
-        "less-plugin-npm-import": "^2.1.0",
-        "react-test-renderer": "^16.8.6",
-        "react-testing-library": "^6.1.2"
-    },
     "dependencies": {
         "antd": "^3.16.3",
         "aws-amplify": "^2.2.6",
