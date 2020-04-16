@@ -1,21 +1,22 @@
 {
-    "name": "@sanar/utils",
-    "version": "0.0.1-alpha.0",
-    "description": "",
-    "main": "index.js",
-    "dependencies": {
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6",
-        "styled-components": "^4.3.2",
-        "typescript": "^3.5.3"
-    },
-    "scripts": {
-        "build": "cross-env BABEL_ENV=build babel src -d dist --source-maps --delete-dir-on-start --config-file ./babel.config.js --extensions \".ts,.tsx\" --no-comments --copy-files",
-        "build:types": "tsc --emitDeclarationOnly -w",
-        "start": "yarn build -w",
-        "start:dev": "npm-run-all --parallel start build:types",
-        "test": "jest"
-    },
-    "author": "@sanar",
-    "license": "ISC"
+  "name": "@diogobiz/utils",
+  "version": "1.0.8",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "build": "cross-env BABEL_ENV=build babel src -d dist --source-maps --delete-dir-on-start --config-file ./babel.config.js --extensions \".ts,.tsx\" --no-comments --copy-files",
+    "build:types": "tsc --emitDeclarationOnly -w",
+    "start": "yarn build -w",
+    "start:dev": "npm-run-all --parallel start build:types",
+    "test": "jest"
+  },
+  "author": "@sanar",
+  "license": "ISC",
+  "gitHead": "35b3aeec40df59c2ba740df9c6bd276936c8234c"
 }
