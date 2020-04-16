@@ -3,6 +3,7 @@
   "version": "1.0.11",
   "license": "ISC",
   "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "scripts": {
     "build": "cross-env BABEL_ENV=build babel src -d dist --source-maps --delete-dir-on-start --config-file ./babel.config.js --extensions \".ts,.tsx\" --no-comments --copy-files",
     "build:storybook": "build-storybook",
@@ -12,7 +13,8 @@
     "start": "yarn build -w",
     "start:dev": "npm-run-all --parallel start build:types",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "jest"
+    "test": "jest",
+    "rollup": "rollup -c ../../rollup.config.js"
   },
   "peerDependencies": {
     "@diogobiz/sanar-ui": "*",
