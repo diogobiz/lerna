@@ -11,7 +11,8 @@
     "typescript": "^3.5.3"
   },
   "scripts": {
-    "build": "cross-env BABEL_ENV=build babel src -d dist --source-maps --delete-dir-on-start --config-file ./babel.config.js --extensions \".ts,.tsx\" --no-comments --copy-files",
+    "build": "yarn build:babel && yarn build:types",
+    "build:babel": "cross-env BABEL_ENV=build babel src -d dist --source-maps --delete-dir-on-start --config-file ./babel.config.js --extensions \".ts,.tsx\" --no-comments --copy-files",
     "build:types": "tsc -project tsconfig.json",
     "start": "yarn build -w",
     "start:dev": "npm-run-all --parallel start build:types",

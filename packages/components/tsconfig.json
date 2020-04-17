@@ -1,26 +1,21 @@
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "lib": ["dom", "dom.iterable", "esnext"],
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "strict": false,
-        "forceConsistentCasingInFileNames": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "jsx": "react",
-        "outDir": "dist",
-        "removeComments": true,
-        "allowJs": true,
-        "declaration": true,
-        "declarationMap": true,
-        "noFallthroughCasesInSwitch": true,
-        "isolatedModules": false,
-        "noEmit": false,
-        "baseUrl": "src"
-    },
-    "include": ["src"],
-    "exclude": ["dist", "node_modules", ".storybook", "_templates"]
+  "compilerOptions": {
+    "declaration": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "target": "es6",
+    "lib": ["dom", "es2017"],
+    "skipLibCheck": true,
+    "baseUrl": "./*src",
+    "outDir": "./dist"
+  },
+  "exclude": ["dist", "node_modules", ".storybook", "_templates"]
 }
