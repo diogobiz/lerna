@@ -5,7 +5,7 @@
     "bootstrap": "npx lerna bootstrap",
     "clean": "npx lerna clean",
     "publish": "npx lerna publish",
-    "prepublish": "lerna run build",
+    "p1republish": "lerna run build",
     "1prebuild": "lerna exec --parallel -- rimraf dist typings",
     "build1": "rollup -c ../../rollup.config.js"
   },
