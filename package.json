@@ -5,7 +5,7 @@
     "bootstrap": "npx lerna bootstrap",
     "clean": "npx lerna clean",
     "publish": "npx lerna publish",
-    "prepublish": "npx lerna run build"
+    "p1republish": "npx lerna run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
