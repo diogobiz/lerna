@@ -1,30 +1,30 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 import {
-    color,
-    space,
-    layout,
-    flexbox,
-    ColorProps,
-    SpaceProps,
-    FlexboxProps,
-    LayoutProps
-} from 'styled-system'
+  color,
+  space,
+  layout,
+  flexbox,
+  ColorProps,
+  SpaceProps,
+  FlexboxProps,
+  LayoutProps
+} from "styled-system";
 
-import { ESCol } from '@sanar/sanar-ui/dist/Components/Atoms/Grid'
+import { ESCol } from "@diogobiz/sanar-ui/dist/Components/Atoms/Grid";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
 export type ISANColProps = PropTypes.InferProps<typeof ESCol.propTypes> &
-    LayoutProps &
-    FlexboxProps &
-    SpaceProps &
-    ColorProps
+  LayoutProps &
+  FlexboxProps &
+  SpaceProps &
+  ColorProps;
 
 const SANCol = SANStyled(ESCol)`
     ${layout}
     ${space}
     ${flexbox}
     ${color}
-`
-export default SANCol
+`;
+export default SANCol;

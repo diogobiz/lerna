@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import ESIcon from '@sanar/sanar-ui/dist/Components/Atoms/Icon'
-import { SANStyled } from '../../../Theme'
+import ESIcon from "@diogobiz/sanar-ui/dist/Components/Atoms/Icon";
+import { SANStyled } from "../../../Theme";
 
-export type ISANIconProps = PropTypes.InferProps<typeof ESIcon['propTypes']>
+export type ISANIconProps = PropTypes.InferProps<typeof ESIcon["propTypes"]>;
 
-const SANIcon: React.FC<ISANIconProps> = SANStyled(ESIcon)``
+const SANIcon: React.FC<ISANIconProps> = SANStyled(ESIcon)``;
 
-export default SANIcon
+export default SANIcon;

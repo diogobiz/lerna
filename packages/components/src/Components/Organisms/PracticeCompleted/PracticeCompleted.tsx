@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESPracticeCompleted from '@sanar/sanar-ui/dist/Components/Organisms/PracticeCompleted'
+import ESPracticeCompleted from "@diogobiz/sanar-ui/dist/Components/Organisms/PracticeCompleted";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
 export type ISANPracticeCompletedProps = PropTypes.InferProps<
-    typeof ESPracticeCompleted['propTypes']
->
+  typeof ESPracticeCompleted["propTypes"]
+>;
 
-const SANPracticeCompleted = SANStyled(ESPracticeCompleted)``
+const SANPracticeCompleted = SANStyled(ESPracticeCompleted)``;
 
-export default SANPracticeCompleted
+export default SANPracticeCompleted;

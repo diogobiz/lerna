@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESForm from '@sanar/sanar-ui/dist/Components/Molecules/Form'
+import ESForm from "@diogobiz/sanar-ui/dist/Components/Molecules/Form";
 
-import { SANStyled, SANElement } from '../../../Theme/createTheme'
+import { SANStyled, SANElement } from "../../../Theme/createTheme";
 
-export type ISANFormProps = PropTypes.InferProps<typeof ESForm.propTypes>
+export type ISANFormProps = PropTypes.InferProps<typeof ESForm.propTypes>;
 
-const SANForm: SANElement<ISANFormProps> = SANStyled(ESForm)``
+const SANForm: SANElement<ISANFormProps> = SANStyled(ESForm)``;
 
-export default SANForm
+export default SANForm;

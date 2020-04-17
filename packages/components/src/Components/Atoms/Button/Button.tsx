@@ -1,22 +1,22 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 import {
-    space,
-    layout,
-    position,
-    PositionProps,
-    LayoutProps,
-    SpaceProps
-} from 'styled-system'
+  space,
+  layout,
+  position,
+  PositionProps,
+  LayoutProps,
+  SpaceProps
+} from "styled-system";
 
-import ESButton from '@sanar/sanar-ui/dist/Components/Atoms/Button'
+import ESButton from "@diogobiz/sanar-ui/dist/Components/Atoms/Button";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
 export type ISANButtonProps = PropTypes.InferProps<typeof propTypes> &
-    SpaceProps &
-    LayoutProps &
-    PositionProps
+  SpaceProps &
+  LayoutProps &
+  PositionProps;
 
 const SANButton = SANStyled(ESButton)`
     && {
@@ -24,8 +24,8 @@ const SANButton = SANStyled(ESButton)`
         ${layout}
         ${position}
     }
-`
+`;
 
-const propTypes = ESButton['propTypes']
+const propTypes = ESButton["propTypes"];
 
-export default SANButton
+export default SANButton;

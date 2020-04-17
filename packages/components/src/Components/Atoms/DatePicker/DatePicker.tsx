@@ -1,12 +1,12 @@
-import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
+import React, { forwardRef } from "react";
+import PropTypes from "prop-types";
 
-import ESDatePicker from '@sanar/sanar-ui/dist/Components/Atoms/DatePicker'
+import ESDatePicker from "@diogobiz/sanar-ui/dist/Components/Atoms/DatePicker";
 
 export type ISANDatePickerProps = PropTypes.InferProps<
-    typeof ESDatePicker.propTypes
->
+  typeof ESDatePicker.propTypes
+>;
 
-const SANDatePicker = (props, ref) => <ESDatePicker {...props} ref={ref} />
+const SANDatePicker = (props, ref) => <ESDatePicker {...props} ref={ref} />;
 
-export default forwardRef(SANDatePicker)
+export default forwardRef(SANDatePicker);

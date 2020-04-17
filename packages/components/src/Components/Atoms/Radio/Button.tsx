@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import { ESRadioButton } from '@sanar/sanar-ui/dist/Components/Atoms/Radio'
+import { ESRadioButton } from "@diogobiz/sanar-ui/dist/Components/Atoms/Radio";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
 export type ISANRadioButtonProps = PropTypes.InferProps<
-    typeof ESRadioButton['propTypes']
->
+  typeof ESRadioButton["propTypes"]
+>;
 
-const SANRadioButton = SANStyled(ESRadioButton)``
+const SANRadioButton = SANStyled(ESRadioButton)``;
 
-export default SANRadioButton
+export default SANRadioButton;

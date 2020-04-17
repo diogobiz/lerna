@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import { ESRadioGroup } from '@sanar/sanar-ui/dist/Components/Atoms/Radio'
+import { ESRadioGroup } from "@diogobiz/sanar-ui/dist/Components/Atoms/Radio";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
 export type ISANRadioGroupProps = PropTypes.InferProps<
-    typeof ESRadioGroup['propTypes']
->
+  typeof ESRadioGroup["propTypes"]
+>;
 
-const SANRadioGroup = SANStyled(ESRadioGroup)``
+const SANRadioGroup = SANStyled(ESRadioGroup)``;
 
-export default SANRadioGroup
+export default SANRadioGroup;

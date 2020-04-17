@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import { ESAvatarMenu } from '@sanar/sanar-ui/dist/Components/Organisms/MainMenu'
+import { ESAvatarMenu } from "@diogobiz/sanar-ui/dist/Components/Organisms/MainMenu";
 
 export type ISANAvatarMenuProps = PropTypes.InferProps<
-    typeof ESAvatarMenu['propTypes']
->
+  typeof ESAvatarMenu["propTypes"]
+>;
 
 const SANAvatarMenu: React.FC<ISANAvatarMenuProps> = props => (
-    <ESAvatarMenu {...props} />
-)
+  <ESAvatarMenu {...props} />
+);
 
-export default SANAvatarMenu
+export default SANAvatarMenu;

@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import { ESDropdownButton } from '@sanar/sanar-ui/dist/Components/Atoms/Dropdown'
+import { ESDropdownButton } from "@diogobiz/sanar-ui/dist/Components/Atoms/Dropdown";
 
-import { SANStyled, SANElement } from '../../../Theme/createTheme'
+import { SANStyled, SANElement } from "../../../Theme/createTheme";
 
 export interface ISANDropdownButtonProps
-    extends PropTypes.InferProps<typeof ESDropdownButton.propTypes> {}
+  extends PropTypes.InferProps<typeof ESDropdownButton.propTypes> {}
 
 const SANDropdownButton: SANElement<ISANDropdownButtonProps> = SANStyled(
-    ESDropdownButton
-)``
+  ESDropdownButton
+)``;
 
-export default SANDropdownButton
+export default SANDropdownButton;

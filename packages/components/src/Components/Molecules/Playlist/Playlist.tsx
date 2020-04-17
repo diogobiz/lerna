@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESPlaylist from '@sanar/sanar-ui/dist/Components/Molecules/Playlist'
+import ESPlaylist from "@diogobiz/sanar-ui/dist/Components/Molecules/Playlist";
 
-import { SANStyled, SANElement } from '../../../Theme/createTheme'
+import { SANStyled, SANElement } from "../../../Theme/createTheme";
 
 export type ISANPlaylistProps = PropTypes.InferProps<
-    typeof ESPlaylist.propTypes
->
+  typeof ESPlaylist.propTypes
+>;
 
-const SANPlaylist: SANElement<ISANPlaylistProps> = SANStyled(ESPlaylist)``
+const SANPlaylist: SANElement<ISANPlaylistProps> = SANStyled(ESPlaylist)``;
 
-export default SANPlaylist
+export default SANPlaylist;

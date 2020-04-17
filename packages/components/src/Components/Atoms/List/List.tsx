@@ -1,21 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import { theme } from 'styled-tools'
+import { theme } from "styled-tools";
 
-import { SANStyled } from '../../../Theme'
+import { SANStyled } from "../../../Theme";
 
-import ESListView from '@sanar/sanar-ui/dist/Components/Atoms/ListView'
+import ESListView from "@diogobiz/sanar-ui/dist/Components/Atoms/ListView";
 
 interface IProps extends PropTypes.InferProps<typeof ESListView.propTypes> {}
 
 const SANList: React.FC<IProps> = SANStyled(ESListView)`
     && {
-        background: ${theme('colors.white.10')};
-        border-radius: ${theme('radii.base')};
-        box-shadow: 0 1px 2px ${theme('colors.grey.2')};
-        border: 0.5pt solid ${theme('colors.grey.2')}
+        background: ${theme("colors.white.10")};
+        border-radius: ${theme("radii.base")};
+        box-shadow: 0 1px 2px ${theme("colors.grey.2")};
+        border: 0.5pt solid ${theme("colors.grey.2")}
     }
-`
+`;
 
-export default SANList
+export default SANList;

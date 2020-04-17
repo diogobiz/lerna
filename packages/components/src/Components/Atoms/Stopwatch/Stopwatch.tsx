@@ -1,14 +1,14 @@
-import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
+import React, { forwardRef } from "react";
+import PropTypes from "prop-types";
 
-import ESStopwatch from '@sanar/sanar-ui/dist/Components/Atoms/Stopwatch'
+import ESStopwatch from "@diogobiz/sanar-ui/dist/Components/Atoms/Stopwatch";
 
 export type ISANStopwatchProps = PropTypes.InferProps<
-    typeof ESStopwatch.propTypes
->
+  typeof ESStopwatch.propTypes
+>;
 
 const SANStopwatch: React.FC<ISANStopwatchProps> = (props, ref) => (
-    <ESStopwatch {...props} ref={ref} />
-)
+  <ESStopwatch {...props} ref={ref} />
+);
 
-export default forwardRef(SANStopwatch)
+export default forwardRef(SANStopwatch);

@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESBadge from '@sanar/sanar-ui/dist/Components/Atoms/Badge'
+import ESBadge from "@diogobiz/sanar-ui/dist/Components/Atoms/Badge";
 
-import { SANStyled, SANElement } from '../../../Theme/createTheme'
+import { SANStyled, SANElement } from "../../../Theme/createTheme";
 
-export type ISANBadgeProps = PropTypes.InferProps<typeof ESBadge.propTypes>
+export type ISANBadgeProps = PropTypes.InferProps<typeof ESBadge.propTypes>;
 
-const SANBadge: SANElement<ISANBadgeProps> = SANStyled(ESBadge)``
+const SANBadge: SANElement<ISANBadgeProps> = SANStyled(ESBadge)``;
 
-export default SANBadge
+export default SANBadge;

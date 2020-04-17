@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import ESRate from '@sanar/sanar-ui/dist/Components/Atoms/Rate'
-import { SANStyled } from '../../../Theme'
+import ESRate from "@diogobiz/sanar-ui/dist/Components/Atoms/Rate";
+import { SANStyled } from "../../../Theme";
 
-export type ISANRateProps = PropTypes.InferProps<typeof ESRate['propTypes']>
+export type ISANRateProps = PropTypes.InferProps<typeof ESRate["propTypes"]>;
 
-const SANRate: React.FC<ISANRateProps> = SANStyled(ESRate)``
+const SANRate: React.FC<ISANRateProps> = SANStyled(ESRate)``;
 
-export default SANRate
+export default SANRate;

@@ -1,16 +1,16 @@
-import PropTypes from 'prop-types'
-import { space, SpaceProps } from 'styled-system'
+import PropTypes from "prop-types";
+import { space, SpaceProps } from "styled-system";
 
-import { SANStyled, SANElement } from '../../../Theme/createTheme'
-import ESCardInfo from '@sanar/sanar-ui/dist/Components/Molecules/CardInfo'
+import { SANStyled, SANElement } from "../../../Theme/createTheme";
+import ESCardInfo from "@diogobiz/sanar-ui/dist/Components/Molecules/CardInfo";
 
 export type ISANCardInfoProps = PropTypes.InferProps<
-    typeof ESCardInfo['propTypes']
+  typeof ESCardInfo["propTypes"]
 > &
-    SpaceProps
+  SpaceProps;
 
 const SANCardInfo: SANElement<ISANCardInfoProps> = SANStyled(ESCardInfo)`
     ${space}
-`
+`;
 
-export default SANCardInfo
+export default SANCardInfo;

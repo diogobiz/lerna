@@ -1,18 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import styled from 'styled-components'
-import { SpaceProps, space } from 'styled-system'
+import styled from "styled-components";
+import { SpaceProps, space } from "styled-system";
 
-import ESSkeleton from '@sanar/sanar-ui/dist/Components/Atoms/Skeleton'
+import ESSkeleton from "@diogobiz/sanar-ui/dist/Components/Atoms/Skeleton";
 
 export type ISANSkeletonProps = PropTypes.InferProps<
-    typeof ESSkeleton['propTypes']
+  typeof ESSkeleton["propTypes"]
 > &
-    SpaceProps
+  SpaceProps;
 
 const SANSkeleton: React.FC<ISANSkeletonProps> = styled(ESSkeleton)`
-    ${space}
-`
+  ${space}
+`;
 
-export default SANSkeleton
+export default SANSkeleton;

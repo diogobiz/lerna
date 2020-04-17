@@ -1,28 +1,28 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 import {
-    color,
-    space,
-    layout,
-    flexbox,
-    border,
-    BorderProps,
-    ColorProps,
-    FlexboxProps,
-    LayoutProps,
-    SpaceProps
-} from 'styled-system'
+  color,
+  space,
+  layout,
+  flexbox,
+  border,
+  BorderProps,
+  ColorProps,
+  FlexboxProps,
+  LayoutProps,
+  SpaceProps
+} from "styled-system";
 
-import { ESRow } from '@sanar/sanar-ui/dist/Components/Atoms/Grid'
+import { ESRow } from "@diogobiz/sanar-ui/dist/Components/Atoms/Grid";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
 export type ISANRowProps = PropTypes.InferProps<typeof ESRow.propTypes> &
-    SpaceProps &
-    LayoutProps &
-    FlexboxProps &
-    ColorProps &
-    BorderProps
+  SpaceProps &
+  LayoutProps &
+  FlexboxProps &
+  ColorProps &
+  BorderProps;
 
 const SANRow = SANStyled(ESRow)`
     && {
@@ -32,6 +32,6 @@ const SANRow = SANStyled(ESRow)`
         ${color}
         ${border}
     }
-`
+`;
 
-export default SANRow
+export default SANRow;

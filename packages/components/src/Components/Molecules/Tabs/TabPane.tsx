@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import { ESTabPane } from '@sanar/sanar-ui/dist/Components/Atoms/Tabs'
+import { ESTabPane } from "@diogobiz/sanar-ui/dist/Components/Atoms/Tabs";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
 export type ISANTabPaneProps = PropTypes.InferProps<
-    typeof ESTabPane['propTypes']
->
+  typeof ESTabPane["propTypes"]
+>;
 
-const SANTabPane = SANStyled(ESTabPane)``
+const SANTabPane = SANStyled(ESTabPane)``;
 
-export default SANTabPane
+export default SANTabPane;

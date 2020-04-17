@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESRadio from '@sanar/sanar-ui/dist/Components/Atoms/Radio'
+import ESRadio from "@diogobiz/sanar-ui/dist/Components/Atoms/Radio";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
-export type ISANRadioProps = PropTypes.InferProps<typeof ESRadio['propTypes']>
+export type ISANRadioProps = PropTypes.InferProps<typeof ESRadio["propTypes"]>;
 
-const SANRadio = SANStyled(ESRadio)``
+const SANRadio = SANStyled(ESRadio)``;
 
-export default SANRadio
+export default SANRadio;

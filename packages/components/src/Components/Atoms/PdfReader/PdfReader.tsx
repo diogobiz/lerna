@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESPdfReader from '@sanar/sanar-ui/dist/Components/Atoms/PdfReader'
+import ESPdfReader from "@diogobiz/sanar-ui/dist/Components/Atoms/PdfReader";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
 export type ISANPdfReaderProps = PropTypes.InferProps<
-    typeof ESPdfReader['propTypes']
->
+  typeof ESPdfReader["propTypes"]
+>;
 
-const SANPdfReader = SANStyled(ESPdfReader)``
+const SANPdfReader = SANStyled(ESPdfReader)``;
 
-export default SANPdfReader
+export default SANPdfReader;

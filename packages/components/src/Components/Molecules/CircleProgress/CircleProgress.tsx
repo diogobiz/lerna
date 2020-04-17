@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESCircleProgress from '@sanar/sanar-ui/dist/Components/Atoms/CircleProgress'
+import ESCircleProgress from "@diogobiz/sanar-ui/dist/Components/Atoms/CircleProgress";
 
-import { SANStyled, SANElement } from '../../../Theme/createTheme'
+import { SANStyled, SANElement } from "../../../Theme/createTheme";
 
 export type ISANCircleProgressProps = PropTypes.InferProps<
-    typeof ESCircleProgress.propTypes
->
+  typeof ESCircleProgress.propTypes
+>;
 
 const SANCircleProgress: SANElement<ISANCircleProgressProps> = SANStyled(
-    ESCircleProgress
-)``
+  ESCircleProgress
+)``;
 
-export default SANCircleProgress
+export default SANCircleProgress;

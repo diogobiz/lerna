@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESQuestion from '@sanar/sanar-ui/dist/Components/Molecules/Question'
+import ESQuestion from "@diogobiz/sanar-ui/dist/Components/Molecules/Question";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
 export type ISANQuestionProps = PropTypes.InferProps<
-    typeof ESQuestion['propTypes']
->
+  typeof ESQuestion["propTypes"]
+>;
 
-const SANQuestion = SANStyled(ESQuestion)``
+const SANQuestion = SANStyled(ESQuestion)``;
 
-export default SANQuestion
+export default SANQuestion;

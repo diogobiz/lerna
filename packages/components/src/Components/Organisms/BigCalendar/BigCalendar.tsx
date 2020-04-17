@@ -1,124 +1,120 @@
 import React, {
-    useRef,
-    useMemo,
-    useImperativeHandle,
-    forwardRef,
-    useState
-} from 'react'
+  useRef,
+  useMemo,
+  useImperativeHandle,
+  forwardRef,
+  useState
+} from "react";
 
-import { EventApi, View, Duration } from '@fullcalendar/core'
-import FullCalendar from '@fullcalendar/react'
-import ptLocale from '@fullcalendar/core/locales/pt-br'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from '@fullcalendar/interaction'
+import { EventApi, View, Duration } from "@fullcalendar/core";
+import FullCalendar from "@fullcalendar/react";
+import ptLocale from "@fullcalendar/core/locales/pt-br";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import interactionPlugin from "@fullcalendar/interaction";
 
 import {
-    isBefore,
-    format,
-    isEqual,
-    eachWeekendOfInterval,
-    addMonths,
-    subMonths,
-    startOfMonth,
-    endOfMonth,
-    isAfter,
-    startOfDay,
-    endOfDay,
-    isSameDay
-} from 'date-fns'
-import styled from 'styled-components'
-import { theme } from 'styled-tools'
-import { useTranslation } from 'react-i18next'
+  isBefore,
+  format,
+  isEqual,
+  eachWeekendOfInterval,
+  addMonths,
+  subMonths,
+  startOfMonth,
+  endOfMonth,
+  isAfter,
+  startOfDay,
+  endOfDay,
+  isSameDay
+} from "date-fns";
+import styled from "styled-components";
+import { theme } from "styled-tools";
+import { useTranslation } from "react-i18next";
 
-import { useWindowSize } from '@sanar/utils/dist/Hooks'
+import { useWindowSize } from "@diogobiz/utils/dist/Hooks";
 
-import '@fullcalendar/core/main.css'
-import '@fullcalendar/daygrid/main.css'
+import "@fullcalendar/core/main.css";
+import "@fullcalendar/daygrid/main.css";
 
-import './big-calendar.css'
+import "./big-calendar.css";
 
-import { useThemeContext } from '@sanar/utils/dist/Hooks'
+import { useThemeContext } from "@diogobiz/utils/dist/Hooks";
 
-import { SANSpin } from '../../Atoms/Spin'
+import { SANSpin } from "../../Atoms/Spin";
 
 export interface IEvent {
-    id: string
-    title: string
-    url?: string
-    start?: Date
-    end?: Date
-    status?: 'viewed' | 'unseen' | 'live' | 'exams'
-    type?: 'completed' | 'uncompleted' | 'complementary'
-    rendering?: 'background' | 'inverse-background'
-    startEditable?: boolean
-    extendedProps?: object
+  id: string;
+  title: string;
+  url?: string;
+  start?: Date;
+  end?: Date;
+  status?: "viewed" | "unseen" | "live" | "exams";
+  type?: "completed" | "uncompleted" | "complementary";
+  rendering?: "background" | "inverse-background";
+  startEditable?: boolean;
+  extendedProps?: object;
 }
 
-type DateInput = Date | string
+type DateInput = Date | string;
 export interface IDateRangeInput {
-    start: string
-    end: string
+  start: string;
+  end: string;
 }
 
 export interface ISANBigCalendarProps {
-    loading?: boolean
-    events: IEvent[]
-    validRange?: IDateRangeInput
-    onChangeMonth?: (arg: {
-        start: Date
-        end: Date
-        currentMonth: Date
-    }) => void
-    eventLimitClick?: (arg: {
-        date: Date
-        allDay: boolean
-        dayEl: HTMLElement
-        moreEl: HTMLElement
-        segs: any[]
-        hiddenSegs: any[]
-        jsEvent: MouseEvent
-        view: View
-    }) => void
-    eventClick?: (arg: {
-        el: HTMLElement
-        event: EventApi
-        jsEvent: MouseEvent
-        view: View
-    }) => void
-    dateClick?: (arg: {
-        date: Date
-        dateStr: string
-        allDay: boolean
-        resource?: any
-        dayEl: HTMLElement
-        jsEvent: MouseEvent
-        view: View
-    }) => void
-    eventDrop?: (arg: IEventDrop) => void
+  loading?: boolean;
+  events: IEvent[];
+  validRange?: IDateRangeInput;
+  onChangeMonth?: (arg: { start: Date; end: Date; currentMonth: Date }) => void;
+  eventLimitClick?: (arg: {
+    date: Date;
+    allDay: boolean;
+    dayEl: HTMLElement;
+    moreEl: HTMLElement;
+    segs: any[];
+    hiddenSegs: any[];
+    jsEvent: MouseEvent;
+    view: View;
+  }) => void;
+  eventClick?: (arg: {
+    el: HTMLElement;
+    event: EventApi;
+    jsEvent: MouseEvent;
+    view: View;
+  }) => void;
+  dateClick?: (arg: {
+    date: Date;
+    dateStr: string;
+    allDay: boolean;
+    resource?: any;
+    dayEl: HTMLElement;
+    jsEvent: MouseEvent;
+    view: View;
+  }) => void;
+  eventDrop?: (arg: IEventDrop) => void;
 }
 
 interface IEventDrop {
-    el: HTMLElement
-    event: EventApi
-    oldEvent: EventApi
-    delta: Duration
-    revert: () => void
-    jsEvent: Event
-    view: View
+  el: HTMLElement;
+  event: EventApi;
+  oldEvent: EventApi;
+  delta: Duration;
+  revert: () => void;
+  jsEvent: Event;
+  view: View;
 }
 
 const FullCalendarWrapper = styled.div`
     &&&& {
         & .fc {
-            background-color: ${theme('colors.white.10')};
-            border-radius: ${theme('radii.base')};
-            box-shadow: ${theme('shadows.1')};
+            background-color: ${theme("colors.white.10")};
+            border-radius: ${theme("radii.base")};
+            box-shadow: ${theme("shadows.1")};
         }
         & .fc-right button,
         & .fc-left button {
-            background-color: ${theme('colors.grey.0')};
+            background-color: ${theme("colors.grey.0")};
             border: none;
-            color: ${theme('colors.grey.6')};
+            color: ${theme("colors.grey.6")};
             border-radius: 12px;
             width: 24px;
             height: 24px;
@@ -128,27 +124,27 @@ const FullCalendarWrapper = styled.div`
             justify-content: center;
             &:focus,
             &:hover {
-                background-color: ${theme('colors.grey.1')};
-                color: ${theme('colors.grey.8')};
+                background-color: ${theme("colors.grey.1")};
+                color: ${theme("colors.grey.8")};
             }
             & .fc-icon {
-                font-size: ${theme('fontSizes.lg')};
+                font-size: ${theme("fontSizes.lg")};
             }
         }
         & .fc-toolbar {
             justify-content: center;
             margin: 0;
-            border: 1px solid ${theme('colors.grey.2')};
+            border: 1px solid ${theme("colors.grey.2")};
             border-bottom: 0;
-            border-top-left-radius: ${theme('radii.base')};
-            border-top-right-radius: ${theme('radii.base')};
+            border-top-left-radius: ${theme("radii.base")};
+            border-top-right-radius: ${theme("radii.base")};
             & .fc-center {
-                padding: 0 ${theme('space.8')};
+                padding: 0 ${theme("space.8")};
             }
             &.fc-header-toolbar {
                 padding: 1.4em 1.2em;
             }
-            ${theme('mediaQueries.down.xs')} {
+            ${theme("mediaQueries.down.xs")} {
                 justify-content: space-between;
                 & .fc-center {
                     padding: 0;
@@ -178,12 +174,12 @@ const FullCalendarWrapper = styled.div`
             font-size: 0.7em;
             font-weight: bold;
             float: right;
-            color: ${theme('colors.grey.6')};
+            color: ${theme("colors.grey.6")};
             margin-top: 4px;
             margin-right: 10px;
         }
         & .fc-highlight {
-            background-color: ${theme('colors.primary')};
+            background-color: ${theme("colors.primary")};
         }
         
         & .fc-day-number {
@@ -198,13 +194,13 @@ const FullCalendarWrapper = styled.div`
                 border-color: inherit;
                 position: relative;
                 &:before {
-                    content: '${() => format(new Date(), 'd')}';
+                    content: '${() => format(new Date(), "d")}';
                     font-size: 0.7em;
                     width: 15px;
                     height: 15px;
                     border-radius: 9px;
-                    background-color: ${theme('colors.primary')};
-                    color: ${theme('colors.white.10')};
+                    background-color: ${theme("colors.primary")};
+                    color: ${theme("colors.white.10")};
                     position: absolute;
                     left: 1px;
                     top: 2px;
@@ -229,184 +225,177 @@ const FullCalendarWrapper = styled.div`
                 width: 300px;
             }
             & .fc-event-container {
-                 padding: ${theme('space.sm')};
+                 padding: ${theme("space.sm")};
                  & .fc-day-grid-event {
-                     margin-bottom: ${theme('space.xs')};
+                     margin-bottom: ${theme("space.xs")};
                  }
             }
             & .fc-header {
-                 padding: ${theme('space.sm')};
-                 font-size: ${theme('fontSizes.lg')};
+                 padding: ${theme("space.sm")};
+                 font-size: ${theme("fontSizes.lg")};
                  font-weight: bold;
             }
         }
     }
-`
+`;
 
 const getFreeDays = (start, end) => {
-    if (!start || !end) return []
-    return eachWeekendOfInterval({
-        start,
-        end
-    }).map(e => ({
-        start: new Date(e),
-        id: `freeday-${new Date(e).getTime()}`,
-        allDay: true,
-        classNames: 'san-free-day'
-    }))
-}
+  if (!start || !end) return [];
+  return eachWeekendOfInterval({
+    start,
+    end
+  }).map(e => ({
+    start: new Date(e),
+    id: `freeday-${new Date(e).getTime()}`,
+    allDay: true,
+    classNames: "san-free-day"
+  }));
+};
 
 const SANBigCalendar: React.FC<ISANBigCalendarProps> = (
-    {
-        events = [],
-        eventDrop,
-        loading = false,
-        onChangeMonth,
-        validRange,
-        ...props
-    },
-    ref
+  {
+    events = [],
+    eventDrop,
+    loading = false,
+    onChangeMonth,
+    validRange,
+    ...props
+  },
+  ref
 ) => {
-    const { t } = useTranslation('components')
-    const theme = useThemeContext()
-    const calendarRef = useRef<FullCalendar>()
-    const { width } = useWindowSize()
-    const [currentMonth, setCurrentMonth] = useState(new Date())
+  const { t } = useTranslation("components");
+  const theme = useThemeContext();
+  const calendarRef = useRef<FullCalendar>();
+  const { width } = useWindowSize();
+  const [currentMonth, setCurrentMonth] = useState(new Date());
 
-    const handleChangeMonth = (arg: { view: View; el: HTMLElement }) => {
-        if (!isEqual(arg.view.currentStart, currentMonth)) {
-            setCurrentMonth(arg.view.currentStart)
-        }
-
-        !!onChangeMonth &&
-            onChangeMonth({
-                start: arg.view.activeStart,
-                end: arg.view.activeEnd,
-                currentMonth
-            })
+  const handleChangeMonth = (arg: { view: View; el: HTMLElement }) => {
+    if (!isEqual(arg.view.currentStart, currentMonth)) {
+      setCurrentMonth(arg.view.currentStart);
     }
 
-    const handleEventDrop = (e: IEventDrop) => {
-        const calendar = calendarRef.current.getApi()
-        const events = calendar.getEvents()
-        const newDate = e.event.start
-        const oldDate = e.oldEvent.start
+    !!onChangeMonth &&
+      onChangeMonth({
+        start: arg.view.activeStart,
+        end: arg.view.activeEnd,
+        currentMonth
+      });
+  };
 
-        if (
-            isBefore(startOfDay(newDate), previousMonth) ||
-            isAfter(endOfDay(newDate), nextMonth)
-        ) {
-            e.event.setProp('classNames', 'san-past-event')
-        } else {
-            e.event.setProp('classNames', '')
-        }
+  const handleEventDrop = (e: IEventDrop) => {
+    const calendar = calendarRef.current.getApi();
+    const events = calendar.getEvents();
+    const newDate = e.event.start;
+    const oldDate = e.oldEvent.start;
 
-        // if have free day on new drop day, remove free day
-        const hasFreeDay = events.find(
-            event =>
-                isSameDay(event.start, newDate) && event.id.includes('freeday')
-        )
-        !!hasFreeDay && hasFreeDay.remove()
-
-        // if there was a free day
-        const hasOldFreeDay = freeDays.find(freeDay =>
-            isSameDay(freeDay.start, oldDate)
-        )
-        const isEmptyDay = events.find(event => {
-            return isSameDay(event.start, oldDate)
-        })
-        if (!!hasOldFreeDay && !isEmptyDay) {
-            calendar.addEvent(hasOldFreeDay)
-        }
-
-        !!eventDrop && eventDrop(e)
+    if (
+      isBefore(startOfDay(newDate), previousMonth) ||
+      isAfter(endOfDay(newDate), nextMonth)
+    ) {
+      e.event.setProp("classNames", "san-past-event");
+    } else {
+      e.event.setProp("classNames", "");
     }
 
-    const colors = useMemo(
-        () => ({
-            completed: {
-                color: theme.colors['primary-2'],
-                textColor: theme.colors['primary-5']
-            },
-            uncompleted: {
-                color: theme.colors.burgundy[0],
-                textColor: theme.colors.burgundy[2]
-            },
-            complementary: {
-                color: theme.colors.grey[0],
-                textColor: theme.colors.grey[6]
-            }
-        }),
-        []
-    )
+    // if have free day on new drop day, remove free day
+    const hasFreeDay = events.find(
+      event => isSameDay(event.start, newDate) && event.id.includes("freeday")
+    );
+    !!hasFreeDay && hasFreeDay.remove();
 
-    const freeDays = useMemo(
-        () =>
-            validRange
-                ? getFreeDays(
-                      new Date(validRange.start),
-                      new Date(validRange.end)
-                  )
-                : [],
-        [validRange]
-    )
+    // if there was a free day
+    const hasOldFreeDay = freeDays.find(freeDay =>
+      isSameDay(freeDay.start, oldDate)
+    );
+    const isEmptyDay = events.find(event => {
+      return isSameDay(event.start, oldDate);
+    });
+    if (!!hasOldFreeDay && !isEmptyDay) {
+      calendar.addEvent(hasOldFreeDay);
+    }
 
-    const nextMonth = useMemo(
-        () => startOfMonth(addMonths(startOfDay(new Date(currentMonth)), 1)),
-        [currentMonth]
-    )
-    const previousMonth = useMemo(
-        () => endOfMonth(subMonths(endOfDay(new Date(currentMonth)), 1)),
-        [currentMonth]
-    )
+    !!eventDrop && eventDrop(e);
+  };
 
-    const eventsMap = useMemo(() => {
-        return [
-            ...events.map(event => ({
-                ...event,
-                ...colors[event.type],
-                allDay: true,
-                classNames: (isBefore(startOfDay(event.start), previousMonth) ||
-                    isAfter(endOfDay(event.start), nextMonth)) && [
-                    'san-past-event'
-                ]
-            })),
-            ...freeDays.filter(
-                free =>
-                    !events.find(event => isSameDay(event.start, free.start))
-            )
-        ]
-    }, [events, freeDays, currentMonth, previousMonth])
+  const colors = useMemo(
+    () => ({
+      completed: {
+        color: theme.colors["primary-2"],
+        textColor: theme.colors["primary-5"]
+      },
+      uncompleted: {
+        color: theme.colors.burgundy[0],
+        textColor: theme.colors.burgundy[2]
+      },
+      complementary: {
+        color: theme.colors.grey[0],
+        textColor: theme.colors.grey[6]
+      }
+    }),
+    []
+  );
 
-    useImperativeHandle(ref, () => calendarRef.current)
+  const freeDays = useMemo(
+    () =>
+      validRange
+        ? getFreeDays(new Date(validRange.start), new Date(validRange.end))
+        : [],
+    [validRange]
+  );
 
-    return (
-        <FullCalendarWrapper>
-            <SANSpin spinning={loading} flex>
-                <FullCalendar
-                    height={width < 768 && 650}
-                    fixedWeekCount={false}
-                    aspectRatio={1.7}
-                    events={eventsMap}
-                    ref={calendarRef}
-                    locale={ptLocale}
-                    defaultView='dayGridMonth'
-                    plugins={[dayGridPlugin, interactionPlugin]}
-                    header={{
-                        left: 'prev',
-                        right: 'next',
-                        center: 'title'
-                    }}
-                    datesRender={handleChangeMonth}
-                    eventLimit
-                    eventLimitText={n => `${t('bigCalendar.more')} ${n}`}
-                    eventDrop={handleEventDrop}
-                    validRange={validRange}
-                    {...props}
-                />
-            </SANSpin>
-        </FullCalendarWrapper>
-    )
-}
+  const nextMonth = useMemo(
+    () => startOfMonth(addMonths(startOfDay(new Date(currentMonth)), 1)),
+    [currentMonth]
+  );
+  const previousMonth = useMemo(
+    () => endOfMonth(subMonths(endOfDay(new Date(currentMonth)), 1)),
+    [currentMonth]
+  );
 
-export default forwardRef(SANBigCalendar)
+  const eventsMap = useMemo(() => {
+    return [
+      ...events.map(event => ({
+        ...event,
+        ...colors[event.type],
+        allDay: true,
+        classNames: (isBefore(startOfDay(event.start), previousMonth) ||
+          isAfter(endOfDay(event.start), nextMonth)) && ["san-past-event"]
+      })),
+      ...freeDays.filter(
+        free => !events.find(event => isSameDay(event.start, free.start))
+      )
+    ];
+  }, [events, freeDays, currentMonth, previousMonth]);
+
+  useImperativeHandle(ref, () => calendarRef.current);
+
+  return (
+    <FullCalendarWrapper>
+      <SANSpin spinning={loading} flex>
+        <FullCalendar
+          height={width < 768 && 650}
+          fixedWeekCount={false}
+          aspectRatio={1.7}
+          events={eventsMap}
+          ref={calendarRef}
+          locale={ptLocale}
+          defaultView="dayGridMonth"
+          plugins={[dayGridPlugin, interactionPlugin]}
+          header={{
+            left: "prev",
+            right: "next",
+            center: "title"
+          }}
+          datesRender={handleChangeMonth}
+          eventLimit
+          eventLimitText={n => `${t("bigCalendar.more")} ${n}`}
+          eventDrop={handleEventDrop}
+          validRange={validRange}
+          {...props}
+        />
+      </SANSpin>
+    </FullCalendarWrapper>
+  );
+};
+
+export default forwardRef(SANBigCalendar);

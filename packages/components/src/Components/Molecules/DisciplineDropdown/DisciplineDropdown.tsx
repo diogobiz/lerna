@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESDisciplineDropdown from '@sanar/sanar-ui/dist/Components/Molecules/DisciplineDropdown'
+import ESDisciplineDropdown from "@diogobiz/sanar-ui/dist/Components/Molecules/DisciplineDropdown";
 
-import { SANStyled, SANElement } from '../../../Theme/createTheme'
+import { SANStyled, SANElement } from "../../../Theme/createTheme";
 
 export type ISANDisciplineDropdownProps = PropTypes.InferProps<
-    typeof ESDisciplineDropdown.propTypes
->
+  typeof ESDisciplineDropdown.propTypes
+>;
 
 const SANDisciplineDropdown: SANElement<ISANDisciplineDropdownProps> = SANStyled(
-    ESDisciplineDropdown
-)``
+  ESDisciplineDropdown
+)``;
 
-export default SANDisciplineDropdown
+export default SANDisciplineDropdown;

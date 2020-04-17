@@ -1,67 +1,67 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { space, SpaceProps } from 'styled-system'
+import React from "react";
+import PropTypes from "prop-types";
+import { space, SpaceProps } from "styled-system";
 
-import { SANStyled } from '../../../Theme/createTheme'
-import ESCardCourseModule from '@sanar/sanar-ui/dist/Components/Molecules/CardCourseModule'
-import { useThemeContext } from '@sanar/utils/dist/Hooks'
+import { SANStyled } from "../../../Theme/createTheme";
+import ESCardCourseModule from "@diogobiz/sanar-ui/dist/Components/Molecules/CardCourseModule";
+import { useThemeContext } from "@diogobiz/utils/dist/Hooks";
 
 interface IProps
-    extends PropTypes.InferProps<typeof ESCardCourseModule['propTypes']>,
-        SpaceProps {
-    image?: string
-    resourceType: 'Document' | 'Video' | 'Question' | 'Quiz'
-    type?: string
+  extends PropTypes.InferProps<typeof ESCardCourseModule["propTypes"]>,
+    SpaceProps {
+  image?: string;
+  resourceType: "Document" | "Video" | "Question" | "Quiz";
+  type?: string;
 }
 
 const SANCardCourseModuleStyled = SANStyled(ESCardCourseModule)`
     && {
         ${space}
     }
-`
+`;
 
 const SANCardCourseModule = ({
-    image,
-    resourceType,
-    type,
-    ...props
+  image,
+  resourceType,
+  type,
+  ...props
 }: IProps) => {
-    const {
-        assets: {
-            cardCourseModuleThumbs: {
-                flowchart,
-                mentalmap,
-                article,
-                document,
-                question
-            }
-        }
-    } = useThemeContext()
-
-    const configureThumbnail = () => {
-        switch (resourceType) {
-            case 'Video':
-                return image || ''
-            case 'Document':
-                switch (type) {
-                    case 'flowchart':
-                        return flowchart
-                    case 'mentalmap':
-                        return mentalmap
-                    case 'article':
-                        return article
-                    default:
-                        return document
-                }
-            case 'Question':
-            case 'Quiz':
-                return question
-            default:
-                return image
-        }
+  const {
+    assets: {
+      cardCourseModuleThumbs: {
+        flowchart,
+        mentalmap,
+        article,
+        document,
+        question
+      }
     }
+  } = useThemeContext();
 
-    return <SANCardCourseModuleStyled image={configureThumbnail()} {...props} />
-}
+  const configureThumbnail = () => {
+    switch (resourceType) {
+      case "Video":
+        return image || "";
+      case "Document":
+        switch (type) {
+          case "flowchart":
+            return flowchart;
+          case "mentalmap":
+            return mentalmap;
+          case "article":
+            return article;
+          default:
+            return document;
+        }
+      case "Question":
+      case "Quiz":
+        return question;
+      default:
+        return image;
+    }
+  };
 
-export default SANCardCourseModule
+  return <SANCardCourseModuleStyled image={configureThumbnail()} {...props} />;
+};
+
+export default SANCardCourseModule;

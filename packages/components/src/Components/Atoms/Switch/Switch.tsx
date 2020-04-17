@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESSwitch from '@sanar/sanar-ui/dist/Components/Atoms/Switch'
+import ESSwitch from "@diogobiz/sanar-ui/dist/Components/Atoms/Switch";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
-export type ISANSwitchProps = PropTypes.InferProps<typeof ESSwitch.propTypes>
+export type ISANSwitchProps = PropTypes.InferProps<typeof ESSwitch.propTypes>;
 
-const SANSwitch = SANStyled(ESSwitch)``
+const SANSwitch = SANStyled(ESSwitch)``;
 
-export default SANSwitch
+export default SANSwitch;

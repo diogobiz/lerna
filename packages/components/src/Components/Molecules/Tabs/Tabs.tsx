@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types'
-import { space, flex, SpaceProps, FlexProps } from 'styled-system'
+import PropTypes from "prop-types";
+import { space, flex, SpaceProps, FlexProps } from "styled-system";
 
-import ESTabs from '@sanar/sanar-ui/dist/Components/Atoms/Tabs'
+import ESTabs from "@diogobiz/sanar-ui/dist/Components/Atoms/Tabs";
 
-import { SANStyled } from '../../../Theme/createTheme'
-import { ifNotProp, ifProp } from 'styled-tools'
-import { css } from 'styled-components'
+import { SANStyled } from "../../../Theme/createTheme";
+import { ifNotProp, ifProp } from "styled-tools";
+import { css } from "styled-components";
 
-export type ISANTabsProps = PropTypes.InferProps<typeof ESTabs['propTypes']> &
-    SpaceProps &
-    FlexProps & { overflow?: boolean; container?: boolean }
+export type ISANTabsProps = PropTypes.InferProps<typeof ESTabs["propTypes"]> &
+  SpaceProps &
+  FlexProps & { overflow?: boolean; container?: boolean };
 
 const SANTabs = SANStyled(ESTabs)`
     display: flex;
@@ -20,21 +20,21 @@ const SANTabs = SANStyled(ESTabs)`
     }
 
     ${ifNotProp(
-        'overflow',
-        css`
-            overflow: inherit;
-        `
+      "overflow",
+      css`
+        overflow: inherit;
+      `
     )}
 
     
     ${ifProp(
-        'container',
-        css`
-            & .ant-tabs-nav-container {
-                max-width: 978px;
-                margin: 0 auto;
-            }
-        `
+      "container",
+      css`
+        & .ant-tabs-nav-container {
+          max-width: 978px;
+          margin: 0 auto;
+        }
+      `
     )}
 
     & .ant-tabs-content {
@@ -43,6 +43,6 @@ const SANTabs = SANStyled(ESTabs)`
 
     ${space}
     ${flex}
-`
+`;
 
-export default SANTabs
+export default SANTabs;

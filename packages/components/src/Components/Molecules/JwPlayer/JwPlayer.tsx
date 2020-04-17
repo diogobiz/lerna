@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESJwPlayer from '@sanar/sanar-ui/dist/Components/Molecules/JwPlayer'
+import ESJwPlayer from "@diogobiz/sanar-ui/dist/Components/Molecules/JwPlayer";
 
-import { SANStyled } from '../../../Theme/createTheme'
+import { SANStyled } from "../../../Theme/createTheme";
 
 export type ISANJwPlayerProps = PropTypes.InferProps<
-    typeof ESJwPlayer['propTypes']
->
+  typeof ESJwPlayer["propTypes"]
+>;
 
-const SANJwPlayer = SANStyled(ESJwPlayer)``
+const SANJwPlayer = SANStyled(ESJwPlayer)``;
 
-export default SANJwPlayer
+export default SANJwPlayer;

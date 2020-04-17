@@ -1,18 +1,18 @@
-import PropTypes from 'prop-types'
-import { space, SpaceProps } from 'styled-system'
+import PropTypes from "prop-types";
+import { space, SpaceProps } from "styled-system";
 
-import { SANStyled, SANElement } from '../../../Theme/createTheme'
-import ESCardSelectFilter from '@sanar/sanar-ui/dist/Components/Molecules/CardSelectFilter'
+import { SANStyled, SANElement } from "../../../Theme/createTheme";
+import ESCardSelectFilter from "@diogobiz/sanar-ui/dist/Components/Molecules/CardSelectFilter";
 
 export type ISANCardSelectFilterProps = PropTypes.InferProps<
-    typeof ESCardSelectFilter['propTypes']
+  typeof ESCardSelectFilter["propTypes"]
 > &
-    SpaceProps
+  SpaceProps;
 
 const SANCardSelectFilter: SANElement<ISANCardSelectFilterProps> = SANStyled(
-    ESCardSelectFilter
+  ESCardSelectFilter
 )`
     ${space}
-`
+`;
 
-export default SANCardSelectFilter
+export default SANCardSelectFilter;

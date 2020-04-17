@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import ESModal from '@sanar/sanar-ui/dist/Components/Atoms/Modal'
+import ESModal from "@diogobiz/sanar-ui/dist/Components/Atoms/Modal";
 
-import { SANStyled, SANElement } from '../../../Theme/createTheme'
+import { SANStyled, SANElement } from "../../../Theme/createTheme";
 
-export type ISANModalProps = PropTypes.InferProps<typeof ESModal.propTypes>
+export type ISANModalProps = PropTypes.InferProps<typeof ESModal.propTypes>;
 
-const SANModal: SANElement<ISANModalProps> = SANStyled(ESModal)``
+const SANModal: SANElement<ISANModalProps> = SANStyled(ESModal)``;
 
-export default SANModal
+export default SANModal;
