@@ -2,7 +2,8 @@
   "name": "@diogobiz/utils",
   "version": "1.0.14",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -11,7 +12,7 @@
   },
   "scripts": {
     "build": "cross-env BABEL_ENV=build babel src -d dist --source-maps --delete-dir-on-start --config-file ./babel.config.js --extensions \".ts,.tsx\" --no-comments --copy-files",
-    "build:types": "tsc --emitDeclarationOnly -w",
+    "build:types": "tsc -project tsconfig.json",
     "start": "yarn build -w",
     "start:dev": "npm-run-all --parallel start build:types",
     "test": "jest"
