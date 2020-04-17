@@ -3,7 +3,7 @@ import styled, {
   StyledComponent
 } from "styled-components";
 
-import logoAssets from "./Assets/images/brand/sanar.svg";
+import logoAssets from "../Assets/images/brand/sanar.svg";
 import {
   typeIconPrimaryBook,
   typeIconPrimaryFile,
