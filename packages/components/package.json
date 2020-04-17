@@ -7,7 +7,7 @@
   "scripts": {
     "build": "cross-env BABEL_ENV=build babel src -d dist --source-maps --delete-dir-on-start --config-file ./babel.config.js --extensions \".ts,.tsx\" --no-comments --copy-files",
     "build:storybook": "build-storybook",
-    "build:types": "tsc --emitDeclarationOnly -w",
+    "build:types1": "tsc --emitDeclarationOnly -w",
     "cli": "hygen sanar-components",
     "cli:component": "yarn cli",
     "start": "yarn build -w",

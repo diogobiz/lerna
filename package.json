@@ -5,9 +5,9 @@
     "bootstrap": "npx lerna bootstrap",
     "clean": "npx lerna clean",
     "publish": "npx lerna publish",
-    "prepublish": "lerna run sanarui:rollup",
-    "prebuild": "lerna exec --parallel -- rimraf dist typings",
-    "build": "rollup -c ../../rollup.config.js"
+    "prepublish": "lerna run build",
+    "1prebuild": "lerna exec --parallel -- rimraf dist typings",
+    "build1": "rollup -c ../../rollup.config.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
