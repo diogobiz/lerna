@@ -15,7 +15,7 @@ export function useThrottle(fun: any, timeout: any) {
     cancel();
   }, [cancel]);
 
-  return (...args) => {
+  return (...args: any) => {
     cancel();
 
     timer.current = setTimeout(() => {
